@@ -1,6 +1,7 @@
 
 class TodosController
     def self.findall
+        todo = Todo.all
         TodoView.findall
     end
 
@@ -10,6 +11,7 @@ class TodosController
     end
 
     def self.deletelist(number)
+        # todo = Todo.find(number.to_i)
         todo = Todo.find_by(id: number.to_i)
         if todo.nil?
             puts "List number is not in range. Please try again!"

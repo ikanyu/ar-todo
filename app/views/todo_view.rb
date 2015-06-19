@@ -1,6 +1,5 @@
 class TodoView
     def self.findall
-        todo = Todo.all
         todo.each do |value|
 
             if value.completed == "Y"
